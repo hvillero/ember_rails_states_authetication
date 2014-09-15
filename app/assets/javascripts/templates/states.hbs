@@ -1,0 +1,26 @@
+
+<table class="table table-hover">
+    <thead>
+      <tr><th>Abbreviation</th><th>State</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+    {{#each}}
+        <tr>
+          <td>
+            {{#link-to 'state' this}}{{abbreviation}}{{/link-to}}
+          </td>
+          <td>
+            {{#link-to 'state' this}}{{state}}{{/link-to}}
+          </td>
+          <td>
+            {{#link-to 'state' this}}{{description}}{{/link-to}}
+          </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+
+
+<p>{{#link-to 'states.new' }}New State{{/link-to}}</p>
+{{outlet}}

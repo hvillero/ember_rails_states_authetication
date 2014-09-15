@@ -1,0 +1,14 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="#">Ember States</a>
+        <ul class="nav">
+            <li>{{#link-to "states"}}Home{{/link-to}}</li>
+            <li>{{#if signedIn}}
+              {{#link-to 'sign_out'}}Sign Out{{/link-to}}
+            {{else}}
+              {{#link-to 'sign_in'}}Sign In{{/link-to}}
+            {{/if}}</li>
+        </ul>
+    </div>
+</div>
+{{outlet}}
